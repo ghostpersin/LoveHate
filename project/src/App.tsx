@@ -55,7 +55,7 @@ function App() {
     const prompt = `${rapper}: ${lastResponse}`;
   
     try {
-      const res = await axios.get('http://127.0.0.1:8000/api/bot/', {
+      const res = await axios.get('https://lovehaterap/api/bot/.onrender.com', {
         params: { mode: 'rap', prompt: prompt }
       });
       const newLine = `${rapper}: ${res.data.response}`;
@@ -70,7 +70,7 @@ function App() {
   const handleStartArgument = async () => {
     if (!argumentTopic.trim()) return;
     try {
-      const res = await axios.get('http://127.0.0.1:8000/api/bot/', {
+      const res = await axios.get('https://lovehaterap/api/bot/.onrender.com', {
         params: { mode: 'argument', prompt: argumentTopic }
       });
       const newLine = res.data.response;
@@ -86,7 +86,7 @@ function App() {
     if (!argumentTopic.trim()) return;
     const lastResponse = rapLines[rapLines.length - 1] || argumentTopic;
     try {
-      const res = await axios.get('http://127.0.0.1:8000/api/bot/', {
+      const res = await axios.get('https://lovehaterap/api/bot/.onrender.com', {
         params: { mode: 'argument', prompt: lastResponse }
       });
       const newLine = res.data.response;
@@ -104,7 +104,7 @@ function App() {
     const prompt = `${rapper}: ${lastResponse}`;
   
     try {
-      const res = await axios.get('http://127.0.0.1:8000/api/bot/', {
+      const res = await axios.get('https://lovehaterap/api/bot/.onrender.com', {
         params: { mode: 'flirt', prompt: prompt }
       });
       const newLine = `${rapper}: ${res.data.response}`;
